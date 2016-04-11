@@ -1,0 +1,51 @@
+.menu {
+   margin-right: 10%;
+
+   a {
+
+      margin-bottom: 5px;
+   }
+}
+
+.project {
+   
+   .container {
+      margin-top: 5%;
+   }
+
+   .important_keys {
+
+      h1 {
+         font-size: 30px;
+         font-weight: bold;
+         margin-bottom: 15px;
+         text-decoration: underline;
+         text-transform: uppercase;
+         color: $dark_brown;
+      }
+
+      p {
+         text-transform: uppercase;
+         font-weight: bold;
+         font-size: medium;
+         i {
+            color: $dark_brown;
+         }
+      }
+   }
+
+   h2 {
+      font-size: large;
+      text-transform: uppercase;
+      color: $dark_brown;
+      font-weight: bold;
+   }
+
+   .project_text_format {
+      margin-left: 10%;
+      font-size: 15px;
+      li {
+         list-style-type: disc;
+      }
+   }
+}

@@ -1,0 +1,58 @@
+.skills {
+   margin-top: 50px;
+   margin-right: 75px;
+
+   .progress-radial {
+      float: left;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-right: 70px;
+      margin-bottom: 70px;
+
+      .overlay {
+         position: absolute;
+         width: 160px;
+         height: 160px;
+         background-color: $brown;
+         border-radius: 50%;
+         margin-left: 20px;
+         margin-top: 20px;
+
+         h2 {
+            line-height: 650%;
+            font-weight: bold;
+            color: $smokey_green;
+         }
+
+         h4 {
+            color: $smokey_green;
+         }
+      }
+   }
+}
+
+
+
+/* -------------------------------------
+ * Mixin for progress-% class
+ * ------------------------------------- */
+
+$step: 5;
+$loops: 20;
+$increment: 18;
+$half: 10;
+
+//divide circle through 20 equal parts
+@for $i from 0 through $loops {
+   .progress-#{$i*$step} {
+      @if $i < $half {
+         $nextdeg: 90deg + ( $increment * $i );
+         background-image: linear-gradient(90deg, $brown 50%, transparent 50%, transparent), linear-gradient($nextdeg, $dark_brown 50%, $brown 50%, $brown);
+      }
+      @else {
+         $nextdeg: -90deg + ( $increment * ( $i - $half ) );
+         background-image: linear-gradient($nextdeg, $dark_brown 50%, transparent 50%, transparent), linear-gradient(270deg, $dark_brown 50%, $brown 50%, $brown);
+      }
+   }
+}

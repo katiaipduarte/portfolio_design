@@ -1,0 +1,30 @@
+@media only screen and (max-width : 992px) {
+	header, main {
+		padding-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+	.mobile_nav_button {
+		font-size: $button_size;
+		margin-top: $button_size;
+		margin-right: $button_size;
+	}
+
+	.skills {
+		
+		.row {
+			margin-left: 25%;
+		}
+	}
+
+	.project {
+
+		.mobile_nav_button {
+			color: $dark_brown;
+		}
+
+		.container {
+			margin-top: 20%;
+		}
+	}
+}

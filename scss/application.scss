@@ -1,0 +1,193 @@
+@import 'normalize';
+@import 'reset';
+
+$dark_brown:   		#846C63;
+$light_brown:  		rgba(255, 255, 255, 0.5);
+$active_shadow:		rgba(255, 255, 255, 0.125);
+$active:       		rgba(0, 0, 0, 0.15);
+$brown:        		#F6F4F1;
+$white:        		#fff;
+$smokey_green: 		#88AAA9;
+$shadow:       		rgba(0, 0, 0, 0.1);
+$font-stack:   		'Raleway', sans-serif;
+$button_size: 			25px;
+
+* {
+	box-sizing: border-box;
+
+   body {
+   	font-family: $font-stack;
+      background-color: $brown;
+
+		header, main {
+	      padding-left: 150px;
+	   }
+
+      #slide-out {
+         top: 0;
+         left: 0;
+         height: 100%;
+         background: $dark_brown;
+         text-align: right;
+         -webkit-box-shadow: inset -0.25em 0 0.25em 0 $shadow;
+         -moz-box-shadow: inset -0.25em 0 0.25em 0 $shadow;
+         box-shadow: inset -0.25em 0 0.25em 0 $shadow;
+
+         .logo {
+            margin: 1.75em 1.5em 1.5em 1.5em;
+            position: relative;
+            min-height: 45px;
+            cursor: default;
+
+				img {
+					max-width: 48px;
+					max-height: 48px;
+				}
+
+            .title {
+               position: relative;
+               color: $white;
+               font-weight: 600;
+               font-size: 1em;
+               line-height: 1em;
+            }
+            .job {
+               position: relative;
+               display: block;
+               font-size: 0.7em;
+               color: $light_brown;
+               line-height: 1.25em;
+               margin: 0.5em 0 0 0;
+            }
+         }
+
+         .navigation {
+            a:hover {
+               background-color: transparent !important;
+            }
+
+            a {
+               color: $light_brown;
+
+               i {
+                  color: $light_brown;
+                  margin-left: 10px;
+               }
+            }
+
+            .active {
+               background: $active;
+               -webkit-box-shadow: inset 0 0 0.25em 0 $active_shadow;
+               -moz-box-shadow: inset 0 0 0.25em 0 $active_shadow;
+               box-shadow: inset 0 0 0.25em 0 $active_shadow;
+
+               a {
+                  color: $white;
+
+                  i {
+                     color: $smokey_green !important;
+                  }
+               }
+            }
+         }
+
+         .footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            cursor: default;
+
+				a:hover {
+					background-color: transparent !important;
+				}
+
+				.copyright {
+					cursor: default;
+					color: $light_brown !important;
+					font-size: 10px;
+					text-transform: uppercase;
+				}
+
+				.social_icons {
+					margin-right: 33px;
+
+	            li {
+	               display: inline-block;
+	               width: 3em;
+	               height: 2em;
+	               line-height: 2em;
+	               text-align: center;
+
+	               i {
+	                  color: $light_brown;
+
+	                  &:hover {
+	                     color: $smokey_green;
+	                  }
+	               }
+	            }
+				}
+         }
+      }
+
+		.mobile_nav_button {
+			color: $white;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+
+		.banner {
+		   position: relative;
+		   width: 100%; /* for IE 6 */
+			margin-bottom: 20px;
+
+
+		   img {
+		      height: 210px;
+		      width: inherit;
+		   }
+
+		   h1 {
+		      position: absolute;
+		      top: 105px;
+		      width: inherit;
+		      color: $white;
+				font-size: 35px;
+				font-weight: bold;
+		   }
+		}
+
+		.text {
+		   text-align: justify;
+		   text-justify: inter-word;
+		}
+
+		.my_btn {
+	      background-color: $dark_brown;
+
+	      &:hover {
+	         background-color: $smokey_green;
+	      }
+	   }
+
+		.pagination {
+			margin-left: 35%;
+			li {
+				a {
+					color: $dark_brown;
+				}
+			}
+
+			.active {
+				background-color: $smokey_green;
+			}
+		}
+   }
+}
+
+@import 'contact';
+@import 'mobile';
+@import 'skills';
+@import 'portfolio';
+@import 'home';

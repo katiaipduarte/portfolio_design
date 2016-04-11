@@ -1,0 +1,29 @@
+.slider {
+   .slides {
+      h1 {
+         font-size: 35px;
+         font-weight: bold;
+      }
+
+      .about_me {
+         h2 {
+            font-size: 20px;
+            font-weight: bolder;
+         }
+      }
+
+      .contact_me, .home_portfolio {
+         h2 {
+            margin-top: 10%;
+            font-size: 20px;
+            font-weight: bolder;
+         }
+      }
+   }
+
+   .indicators  {
+      .active {
+         background-color: $smokey_green !important;
+      }
+   }
+}
