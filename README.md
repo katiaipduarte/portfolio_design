@@ -5,12 +5,12 @@ later compile it in Koala (see more in http://koala-app.com/). Futhermore, this 
 responsive and it should work in all browsers.
 
 ## Pages
-. Homepage
-. Portfolio
-. Portfolio -> Hotel Manager App (Project)
-. Skills
-. About
-. Contact
+* Homepage
+* Portfolio
+* Portfolio -> Hotel Manager App (Project)
+* Skills
+* Aboute
+* Contact
 
 ## Languages and Frameworks used:
 1. HTML 5
