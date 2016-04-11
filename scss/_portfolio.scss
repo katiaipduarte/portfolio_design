@@ -2,13 +2,106 @@
    margin-right: 10%;
 
    a {
-
       margin-bottom: 5px;
+   }
+
+   .wrapper {
+      width: 95%;
+      margin: 3em auto;
+      display: block;
+
+      /* Masonry container */
+      .masonry {
+         margin: 1.5em 0;
+         padding: 0;
+         -moz-column-gap: 1.5em;
+         -webkit-column-gap: 1.5em;
+         column-gap: 1.5em;
+         column-count: 3;
+         -moz-column-count: 3;
+         -webkit-column-count: 3;
+
+         /* Masonry bricks or child elements */
+         .item {
+            display: inline-block;
+            width: 109%;
+            /* Overlay cover image */
+            .cover {
+               position: relative;
+               overflow: hidden;
+               -webkit-transform: translateZ(0);
+               transform: translateZ(0);
+
+               &::before {
+                  content: ' ';
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  left: 0;
+                  background: transparent;
+                  transition: background .35s ease-out;
+               }
+
+               &:hover::before {
+                  background: $light_brown;
+               }
+
+               .image {
+                  display: block;
+                  min-width: 100%;
+                  max-width: 100%;
+                  height: auto;
+               }
+
+               .overlay {
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  left: 0;
+                  padding: 10px;
+                  color: $dark_brown;
+                  -webkit-transform: translateY(100%);
+                  transform: translateY(100%);
+                  transition: -webkit-transform .35s ease-out;
+                  transition: transform .35s ease-out;
+                  font-weight: bold;
+
+                  .content {
+                     font-size: 20px;
+                  }
+
+                  .title {
+                     -webkit-transform: translateY(-webkit-calc(-100% - 10px));
+                     transform: translateY(calc(-100% - 10px));
+                     transition: -webkit-transform .35s ease-out;
+                     transition: transform .35s ease-out;
+                     text-transform: uppercase;
+                     font-size: 25px;
+                  }
+               }
+               &:hover {
+
+                  .overlay {
+                     -webkit-transform: translateY(0);
+                     transform: translateY(0);
+                  }
+
+                  .title {
+                     -webkit-transform: translateY(0);
+                     transform: translateY(0);
+                  }
+               }
+            }
+         }
+      }
    }
 }
 
+/* Styling for the page with a Project*/
 .project {
-   
+
    .container {
       margin-top: 5%;
    }
