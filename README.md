@@ -7,6 +7,8 @@ responsive and it should work in all browsers.
 In the Portfolio page, we have a masonry layout (similar to the one in Pinterest). The cover images in the same
 page, have a overlay quality with the project title and the category to which the project belongs.
 
+Animation appear to not work in Safari browser.
+
 ## Pages
 * Homepage
 * Portfolio
