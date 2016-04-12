@@ -61,15 +61,16 @@
                   bottom: 0;
                   left: 0;
                   padding: 10px;
-                  color: $dark_brown;
                   -webkit-transform: translateY(100%);
                   transform: translateY(100%);
                   transition: -webkit-transform .35s ease-out;
                   transition: transform .35s ease-out;
+                  font-size: 20px;
                   font-weight: bold;
 
                   .content {
-                     font-size: 20px;
+                     font-style: italic !important;
+                     color: $smokey_green;
                   }
 
                   .title {
@@ -78,7 +79,10 @@
                      transition: -webkit-transform .35s ease-out;
                      transition: transform .35s ease-out;
                      text-transform: uppercase;
-                     font-size: 25px;
+                     font-style: normal;
+                     color: $dark_brown;
+                     text-transform: uppercase;
+                     margin-bottom: 10px;
                   }
                }
                &:hover {

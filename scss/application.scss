@@ -6,7 +6,6 @@ $light_brown:  		rgba(255, 255, 255, 0.5);
 $active_shadow:		rgba(255, 255, 255, 0.125);
 $active:       		rgba(0, 0, 0, 0.15);
 $brown:        		#F6F4F1;
-$white:        		#fff;
 $smokey_green: 		#88AAA9;
 $shadow:       		rgba(0, 0, 0, 0.1);
 $font-stack:   		'Raleway', sans-serif;
@@ -46,7 +45,7 @@ $button_size: 			25px;
 
             .title {
                position: relative;
-               color: $white;
+               color: white;
                font-weight: 600;
                font-size: 1em;
                line-height: 1em;
@@ -82,7 +81,7 @@ $button_size: 			25px;
                box-shadow: inset 0 0 0.25em 0 $active_shadow;
 
                a {
-                  color: $white;
+                  color: white;
 
                   i {
                      color: $smokey_green !important;
@@ -105,7 +104,6 @@ $button_size: 			25px;
 					cursor: default;
 					color: $light_brown !important;
 					font-size: 10px;
-					text-transform: uppercase;
 				}
 
 				.social_icons {
@@ -131,7 +129,7 @@ $button_size: 			25px;
       }
 
 		.mobile_nav_button {
-			color: $white;
+			color: white;
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -152,7 +150,7 @@ $button_size: 			25px;
 		      position: absolute;
 		      top: 105px;
 		      width: inherit;
-		      color: $white;
+		      color: white;
 				font-size: 35px;
 				font-weight: bold;
 		   }
