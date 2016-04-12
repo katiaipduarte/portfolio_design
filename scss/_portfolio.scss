@@ -1,107 +1,66 @@
 .menu {
-   margin-right: 10%;
 
-   a {
+   .menu_link {
       margin-bottom: 5px;
    }
+}
 
-   .wrapper {
-      width: 95%;
-      margin: 3em auto;
-      display: block;
+/* Masonry container */
+.masonry {
+   margin-top: 1.5em;
+   margin-bottom: 1.5em;
+   -moz-column-gap: 1.5em !important;
+   -webkit-column-gap: 1.5em;
+   column-gap: 1.5em;
+   column-count: 3;
+   -moz-column-count: 3 !important;
+   -webkit-column-count: 3;
+   display: inline-block;
+   margin-left: 5%;
 
-      /* Masonry container */
-      .masonry {
-         margin: 1.5em 0;
-         padding: 0;
-         -moz-column-gap: 1.5em;
-         -webkit-column-gap: 1.5em;
-         column-gap: 1.5em;
-         column-count: 3;
-         -moz-column-count: 3;
-         -webkit-column-count: 3;
+}
 
-         /* Masonry bricks or child elements */
-         .item {
-            display: inline-block;
-            width: 109%;
-            /* Overlay cover image */
-            .cover {
-               position: relative;
-               overflow: hidden;
-               -webkit-transform: translateZ(0);
-               transform: translateZ(0);
+/* Overlay cover image */
+.cover {
+   position: relative;
 
-               &::before {
-                  content: ' ';
-                  position: absolute;
-                  top: 0;
-                  right: 0;
-                  bottom: 0;
-                  left: 0;
-                  background: transparent;
-                  transition: background .35s ease-out;
-               }
+   img {
+      max-width: 275px;
+   }
 
-               &:hover::before {
-                  background: $light_brown;
-               }
+   .description {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: $light_brown;
+      width: 105%;
+      opacity: 0;
+      transition: -webkit-opacity .65s;
+      transition: opacity .65s;
+      font-size: 20px;
+      font-weight: bold;
 
-               .image {
-                  display: block;
-                  min-width: 100%;
-                  max-width: 100%;
-                  height: auto;
-               }
+      h3 {
+         font-style: italic !important;
+         color: $smokey_green;
+      }
 
-               .overlay {
-                  position: absolute;
-                  top: 0;
-                  right: 0;
-                  bottom: 0;
-                  left: 0;
-                  padding: 10px;
-                  -webkit-transform: translateY(100%);
-                  transform: translateY(100%);
-                  transition: -webkit-transform .35s ease-out;
-                  transition: transform .35s ease-out;
-                  font-size: 20px;
-                  font-weight: bold;
-
-                  .content {
-                     font-style: italic !important;
-                     color: $smokey_green;
-                  }
-
-                  .title {
-                     -webkit-transform: translateY(-webkit-calc(-100% - 10px));
-                     transform: translateY(calc(-100% - 10px));
-                     transition: -webkit-transform .35s ease-out;
-                     transition: transform .35s ease-out;
-                     text-transform: uppercase;
-                     font-style: normal;
-                     color: $dark_brown;
-                     text-transform: uppercase;
-                     margin-bottom: 10px;
-                  }
-               }
-               &:hover {
-
-                  .overlay {
-                     -webkit-transform: translateY(0);
-                     transform: translateY(0);
-                  }
-
-                  .title {
-                     -webkit-transform: translateY(0);
-                     transform: translateY(0);
-                  }
-               }
-            }
-         }
+      h1 {
+         text-transform: uppercase;
+         color: $dark_brown;
+         text-transform: uppercase;
+         margin-bottom: 10px;
       }
    }
+
+   &:hover .description {
+      visibility: visible;
+      opacity: 1;
+   }
 }
+
 
 /* Styling for the page with a Project*/
 .project {
