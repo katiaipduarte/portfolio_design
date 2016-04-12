@@ -27,20 +27,62 @@
 			margin-top: 20%;
 		}
 	}
+
+
+	/* Overlay cover image */
+	.cover {
+	   .description {
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-color: transparent;
+			visibility: visible !important;
+	      opacity: 1 !important;
+
+	      h3 {
+	         font-style: italic !important;
+	         color: $dark_brown;
+	      }
+
+	      h1 {
+	         text-transform: uppercase;
+	         color: $brown;
+	         text-transform: uppercase;
+	         margin-bottom: 10px;
+	      }
+	   }
+	}
 }
 
-@media only screen and (max-width: 634px) {
-	.masonry {
-		-moz-column-count: 1;
-		-webkit-column-count: 1;
-		column-count: 1;
+@media only screen and (max-width: 615px) {
+	.center-align {
+		.masonry {
+			-moz-column-count: 1 !important;
+			-webkit-column-count: 1;
+			-o-column-count: 1;
+			column-count: 1;
+		}
+	}
+}
+
+@media only screen and (max-width: 1186px) and (min-width: 616px) {
+	.center-align {
+		.masonry {
+			-moz-column-count: 2 !important;
+			-o-column-count: 2;
+			-webkit-column-count: 2;
+			column-count: 2;
+		}
 	}
 }
 
 @media only screen and (min-width: 2000px) {
-	.masonry {
-		-moz-column-count: 4;
-		-webkit-column-count: 4;
-		column-count: 4;
+	.center-align {
+		.masonry {
+			-moz-column-count: 4 !important;
+			-webkit-column-count: 4;
+			-o-column-count: 4;
+			column-count: 4;
+		}
 	}
 }
